@@ -16,6 +16,8 @@ const TabelRow = ({item, setSelectedDataId }) => {
                             <td>{item.dob}</td>
                             <td>{item.ph_no}</td> 
                             <td>{item.address}</td>
+                            <td>{item.city}</td>
+                            <td>{item.township}</td>
                             <td>
                                 <div className="dropdown">
                                     <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">

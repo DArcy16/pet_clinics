@@ -16,7 +16,7 @@ const patientData = [
     gender : 'male',
     dob : '1.5.2011',
     ph_no : '09797122199',
-    address : 'တိုက်(၅)၊အခန်း(၁၀၁)၊လှိုင်သီရိအိမ်ရာ, Hlaing, Yangon',
+    address : 'တိုက်(၅)၊အခန်း(၁၀၁)၊လှိုင်သီရိအိမ်ရာ ',
     city : 'yangon',
     township : 'hlaing'
   },
@@ -42,7 +42,7 @@ const patientData = [
     gender : 'male',
     dob : '1.5.2011',
     ph_no : '09797122199',
-    address : 'တိုက်(၅)၊အခန်း(၁၀၁)၊လှိုင်သီရိအိမ်ရာ, Hlaing, Yangon',
+    address : 'တိုက်(၅)၊အခန်း(၁၀၁)၊လှိုင်သီရိအိမ်ရ',
     city : 'yangon',
     township : 'hlaing'
   }

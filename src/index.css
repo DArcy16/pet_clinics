@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary : #54BAB9;
+  --cancel_btn : #ACB3C0;
+  --update_btn : #EDC339;
+  --delete_btn : #CD211D;
+  --toast : #1AB45D;
+  --search : rgba(68, 68, 68, 0.5);
+  --white : #ffffff;
+  --black : #000000;
+  --gray : #444444;
+}
+
+html {
+  font-family: 'Poppins' , sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #cccccc;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: 'Poppins';
+  font-size: 22px;
+  font-weight: 600;
+  color : var(--primary);
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size : 18px;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size : 18px;
+  font-weight: 500;
+  color  : var(--primary);
+}
+
+small {
+  font-family: 'Poppins', sans-serif;
+  font-size : 12px;
+  color : var(--gray);
+}
+
+label {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.nav_bar {
+  background-color: var(--primary);
+  min-width : 100vw;
+  padding : 0.5rem 2.5rem;
+  display : flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.nav_left {
+  width : 14rem;
+  display : flex;
+  flex-direction : row;
+  align-items : center;
+  justify-content : space-between;
+  color : var(--white);
+}
+
+.article-wrapper {
+  max-width : 95vw;
+  min-height : 90vh;
+  background-color: white;
+  margin : 1rem auto;
+  padding : 2rem;
+}
+
+.option_section {
+  display: flex;
+  width : 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top : 1rem;
+}
+
+.search-input {
+  padding : 0.3rem 1rem;
+  border-radius: 20px;
+  border : 1px solid var(--search);
+  color : var(--search);
+  width : 25rem;
+}
+
+.search-wrapper > img {
+  margin-left : -2.5rem;
+}
+
+.select-wrapper {
+  display: flex;
+  gap : 1rem;
+}
+
+.select-wrapper > select {
+  margin : 1rem 0;
+  padding : 0.3rem 1rem;
+  border-radius: 20px;
+  border : 1px solid var(--search);
+  color : var(--search);
+  width : 12rem;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap : 12px;
+  padding : 0.5rem 1.2rem;
+  background-color: var(--primary);
+  border : none;
+  color : white;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 16px;
+  width : 14rem;
+}
+
+.rows-select {
+  text-align: right;
+}
+
+.rows-select > select {
+  padding : 0.3rem 0.5rem;
+  border : 1px solid var(--search);
+  color : var(--search);
+  border-radius: 20px;
+  margin-top : 0.5rem;
+  margin-left : 0.5rem;
+  text-align : center;
+}
+
+table {
+  font-family : 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+th {
+  font-weight: 600;
+  color : var(--primary);
+}
+
+table img{
+  width : 1.5rem;
+}
+
+.modal-content {
+  padding : 1rem;
+}
+
+.form-wrapper {
+  width : 100%;
+}
+
+.form-wrapper .form-input-wrapper {
+  width : 100%;
+  margin-bottom : 0.5rem;
+  display : flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form-input-wrapper > div {
+  width : 48%;
+}
+
+
+.form-input-wrapper input{
+  margin : 0 auto;
+  width : 100%;
+  padding : 0.3rem 0.5rem;
+  border : 1px solid var(--search);
+} 
+
+.form-input-wrapper .form-radio-wrapper input {
+  width : 10%;
+  padding : 0.3rem 0.5rem;
+  border : 1px solid var(--search);
+}
+
+.form-input-wrapper select {
+  width : 100%;
+  padding : 0.3rem 0.5rem;
+  border : 1px solid var(--search);
+}
+
+.form-button-wrapper {
+  margin-top : 1rem;
+  width : 100%;
+  display: flex;
+  justify-content: center;
+  gap : 1rem;
+}
+
+.form-button-wrapper button{
+  width : 20%;
+  padding : 0.3rem 0.5rem;
+  border : none;
+}
+
+.save-btn {
+  background-color: var(--primary);
+  color : white;
+}
+
+.update-btn {
+  background-color: var(--update_btn);
+  color : white;
+}
+
+.form-button-wrapper .cancel-btn {
+  border: 1px solid var(--cancel_btn);
+  color : black;
+}

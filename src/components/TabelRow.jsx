@@ -4,7 +4,11 @@ const TabelRow = ({item, setSelectedDataId }) => {
   return (
     <tr>                    
       <td><input type="checkbox" /></td>
-                            <td>{item.id}</td>
+                            {
+                              item.id.length === 1 ? <td>{item.breed[0]}-000{item.id}</td>
+                              : <td>{item.breed[0]}-00{item.id}</td>
+                            }
+                            
                             <td>{item.pet_name}</td>
                             {item.status === 'allergy'? 
                             <td><img src="src/images/allergy.png" alt="allergy" /></td> 
@@ -15,9 +19,7 @@ const TabelRow = ({item, setSelectedDataId }) => {
                             <td>{item.gender}</td>
                             <td>{item.dob}</td>
                             <td>{item.ph_no}</td> 
-                            <td>{item.address}</td>
-                            <td>{item.city}</td>
-                            <td>{item.township}</td>
+                            <td>{item.address}, {item.city}, {item.township}</td>
                             <td>
                                 <div className="dropdown">
                                     <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">

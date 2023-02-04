@@ -8,7 +8,7 @@ import UpdateModal from './components/UpdateModal'
 
 const patientData = [
   {
-    id : 'B-0011',
+    id : '11',
     pet_name : 'John Doe',
     status : 'allergy',
     pawrent : 'Thel Nu San',
@@ -21,7 +21,7 @@ const patientData = [
     township : 'hlaing'
   },
   {
-    id : 'B-0012',
+    id : '2',
     pet_name : 'John Doe',
     status : 'allergy',
     pawrent : 'Thel Nu San',
@@ -34,7 +34,7 @@ const patientData = [
     township : 'aungmyaytharzan'
   },
   {
-    id : 'B-0013',
+    id : '30',
     pet_name : 'John Doe',
     status : 'pickyeater',
     pawrent : 'Thel Nu San',
@@ -48,7 +48,7 @@ const patientData = [
   }
 ]
 
-const STORAGE_KEY = 'local_store';
+const STORAGE_KEY = 'store1123';
 
 function App() {
   const [patientLists, setPatientLists] = useState(patientData);
@@ -57,13 +57,14 @@ function App() {
 
   useEffect(() => {
     const patientListsJSON = localStorage.getItem(STORAGE_KEY);
-    if  (patientListsJSON !== null) setPatientLists(JSON.parse(patientListsJSON));
-    setSampleLists(patientLists);
+    if  (patientListsJSON !== null) {
+      setPatientLists(JSON.parse(patientListsJSON));
+      setSampleLists(JSON.parse(patientListsJSON));
+    }
   },[])
   
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(patientLists));
-
   }, [patientLists])
 
   const handleProductDelete = (id) => {
@@ -73,7 +74,7 @@ function App() {
   const handlePatientAdd = () => {
   
     const newPatientData = {
-      id : ""+ Math.floor(Math.random() * 1000),
+      id : ""+ Math.floor(Math.random() * 100),
       pet_name : '',
       status : '',
       pawrent : '',
@@ -81,25 +82,26 @@ function App() {
       gender : '',
       dob : '',
       ph_no : '',
-      address : ''
+      address : '',
+      city: '',
+      township: ''
     };
     setSampleLists([...patientLists, newPatientData]);
     setSelectedDataId(newPatientData.id);
-    console.log(sampleLists);
   }
 
 
   function handleDataChange(id , updatedData) {
       const newPatientLists = [...sampleLists];
-      const index = newPatientLists.findIndex((item) => item.id === id);
+      const index = newPatientLists.findIndex((item) => (
+          item.id === id
+      ));
       newPatientLists[index] = updatedData;
-      setSampleLists(newPatientLists);
-      console.log(index);
-      
+      setSampleLists(newPatientLists);     
   }
 
-  const handleDataAdd = (e) => {
-    e.preventDefault();
+  const handleDataAdd = (e ) => {
+    e.preventDefault(); 
     setPatientLists(sampleLists);
     setSelectedDataId('');
   }

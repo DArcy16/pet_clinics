@@ -184,7 +184,7 @@ const Modal = ({selectedDataId, patientLists, handleDataChange, handleDataInputC
             </div>
 
             <div className='form-button-wrapper'>
-                <button className='save-btn' type='submit' data-bs-dismiss="modal" onClick={handleDataAdd}> Save </button>
+                <button className='save-btn' type='submit' data-bs-dismiss="modal" onClick={ handleDataAdd}> Save </button>
                 <button className='cancel-btn' data-bs-dismiss="modal" onClick={handleDataInputCancel}> Cancel </button>
             </div>
         </form>

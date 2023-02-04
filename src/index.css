@@ -234,3 +234,7 @@ table img{
   border: 1px solid var(--cancel_btn);
   color : black;
 }
+
+td {
+  text-transform: capitalize;
+}

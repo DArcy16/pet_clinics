@@ -1,7 +1,9 @@
 import React from 'react'
 import TabelRow from './TabelRow'
 
-const Tabel = ({patientLists, setPatientLists, setSelectedDataId }) => {
+const Tabel = ({patientLists , setSelectedDataId }) => {
+  
+  
 
   return (
      <table className="table">
@@ -17,8 +19,6 @@ const Tabel = ({patientLists, setPatientLists, setSelectedDataId }) => {
                 <th>Date of birth</th>
                 <th>Contact ph no.</th>
                 <th>Address</th>
-                <th>City</th>
-                <th>Township</th>
                 <th></th>
               </tr>
             </thead>

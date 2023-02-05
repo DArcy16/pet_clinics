@@ -2,7 +2,9 @@ import React from 'react'
 
 const TabelRow = ({item, setSelectedDataId }) => {
   return (
-    <tr>                    
+    <>
+      {
+        item.length !== 0 ? <tr>                    
       <td><input type="checkbox" /></td>
                             {
                               item.id.length === 1 ? <td>{item.breed[0]}-000{item.id}</td>
@@ -34,6 +36,10 @@ const TabelRow = ({item, setSelectedDataId }) => {
                                 </div>
                             </td>
                         </tr>
+                        : null
+                        
+      }
+    </>
   )
 }
 

@@ -308,6 +308,7 @@ function App() {
         breed: e.target.value
       })
     )
+    setPagination('1');
   }
 
   const CategorizedList = () => {
@@ -334,6 +335,7 @@ function App() {
         item.pet_name.toLowerCase().includes(searchInput.toLowerCase())
       )))
     }
+    setPagination('1');
   }
 
   const handleDataInputCancel = () => {

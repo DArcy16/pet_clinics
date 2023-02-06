@@ -19,7 +19,7 @@ const TabelRow = ({item, setSelectedDataId }) => {
                             <td>{item.pawrent}</td>
                             <td>{item.breed}</td>
                             <td>{item.gender}</td>
-                            <td>{item.dob}</td>
+                            <td>{item.dob.split("-").reverse().join("-")}</td>
                             <td>{item.ph_no}</td> 
                             <td>{item.address}, {item.city}, {item.township}</td>
                             <td>

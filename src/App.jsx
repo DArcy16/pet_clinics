@@ -313,7 +313,7 @@ function App() {
 
   const CategorizedList = () => {
     if(categoryInput.status === "all" && categoryInput.breed === "all"){
-      return patientLists;
+      return [...patientLists];
     } else if (categoryInput.status === "all"){
       return patientLists.filter(item => item.breed === categoryInput.breed)
     } else if (categoryInput.breed === "all") {

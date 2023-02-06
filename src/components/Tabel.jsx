@@ -2,7 +2,7 @@ import React from 'react'
 import TabelRow from './TabelRow'
 
 const Tabel = ({ CategorizedList, setSelectedDataId, pagination }) => {
-  const FixedList = CategorizedList().filter((item , index) => {
+  const fixedLists = CategorizedList().reverse().filter((item , index) => {
     if(pagination === 1){
       return (index < (pagination)*10) ;
     } else {
@@ -10,8 +10,6 @@ const Tabel = ({ CategorizedList, setSelectedDataId, pagination }) => {
     }
   }
   )
-
-  
 
   return (
      <table className="table">
@@ -32,7 +30,7 @@ const Tabel = ({ CategorizedList, setSelectedDataId, pagination }) => {
             </thead>
             <tbody>
                 {
-                    FixedList.map(item => (
+                    fixedLists.map(item => (
                         <TabelRow item = {item} key={item.id} setSelectedDataId={setSelectedDataId}/>
                     ))
                 }
